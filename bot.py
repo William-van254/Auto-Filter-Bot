@@ -1,5 +1,6 @@
 import asyncio
-from pyrogram import idle #ဒီ bot က pyrogram ကို သုံးတာ သေချာရင် idle ကို import လုပ်ပါ
+from hydrogram import idle 
+
 import logging
 logging.basicConfig(
     level=logging.INFO, 
@@ -109,21 +110,13 @@ class Bot(Client):
                 yield message
                 current += 1
 
-# bot.py ဖိုင်ရဲ့ အောက်ဆုံး
-#app = Bot()
-# ... (အထက်က ကုဒ်များ) ...
-
-# Line 110: app = Bot()
-app = Bot()
-
-# Line 111 နှင့် အောက်က app.run() ကို အောက်ပါအတိုင်း အစားထိုးပါ
+app = Bot() # Line 110
 
 async def main():
     await app.start()
-    # Bot စတင်ပြီးနောက် အမြဲတမ်း ဖွင့်ထားရန်
     await idle() 
     await app.stop()
 
 if __name__ == "__main__":
-    # Event Loop ကို စတင်ရန် asyncio.run() ကို အသုံးပြုပါ
+    # Event Loop Error ကို ဖြေရှင်းပေးမယ့် ပုံစံ
     asyncio.run(main())
