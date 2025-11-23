@@ -1,5 +1,5 @@
 import asyncio
-from pyrogram import idle # ဒီ bot က pyrogram ကို သုံးတာ သေချာရင် idle ကို import လုပ်ပါ
+from pyrogram import idle #ဒီ bot က pyrogram ကို သုံးတာ သေချာရင် idle ကို import လုပ်ပါ
 import logging
 logging.basicConfig(
     level=logging.INFO, 
