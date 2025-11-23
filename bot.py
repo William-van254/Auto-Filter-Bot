@@ -107,21 +107,6 @@ class Bot(Client):
                 yield message
                 current += 1
 
-import asyncio
-import uvloop # uvloop ကို ထည့်သွင်းပါ
-
-# ... (အထက်ပါ ကုဒ်များကို မူလအတိုင်း ထားရှိပါ) ...
-
-async def main():
-    await app.start()
-    await idle()
-    await app.stop()
-
-if __name__ == "__main__":
-    app = Bot() # Line 110
-
-    # uvloop ကို Default Event Loop အဖြစ် သတ်မှတ်ပါ
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy()) 
-    
-    # Bot ကို စတင်ပါ
-    asyncio.run(main()) # Line 111 ကို ဒီလိုပြောင်းလိုက်ပါ
+# bot.py ဖိုင်ရဲ့ အောက်ဆုံး
+app = Bot()
+app.run()
