@@ -110,7 +110,7 @@ class Bot(Client):
                 current += 1
 
 # bot.py ဖိုင်ရဲ့ အောက်ဆုံး
-app = Bot()
+#app = Bot()
 # ... (အထက်က ကုဒ်များ) ...
 
 # Line 110: app = Bot()
